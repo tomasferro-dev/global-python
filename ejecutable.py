@@ -2,13 +2,20 @@ from detector import Detector
 from radiacion import Radiacion
 from virus import Virus
 from sanador import Sanador
+# from obtener_adn import obtener_adn_usuario
+from adn_a_matriz import convertir_adn_a_matriz
 
 def main():
+
+    secuencia_adn = input("Por favor, ingrese una secuencia de ADN de 36 caracteres (A, T, C, G): ")
+    try:
+        matriz_adn = convertir_adn_a_matriz(secuencia_adn)
+        print("Matriz de ADN:")
+        for fila in matriz_adn:
+            print(fila)
+    except ValueError as e:
+        print(f"Error: {e}")
     
-    matriz_adn = ["AGATCA", "GATTCA", "CAACAT", "GAGCTA", "ATTGCG", "CTGTTC"]
-    mutante_horizontal = ["TTTTCA", "GATTCA", "CAACAT", "GAGCTA", "ATTGCG", "CTGTTC"]
-    mutante_vertical = ["AGATCA", "GATTCA", "CAATAT", "GAGTTA", "ATTGCG", "CTGTTC"]
-    mutante_diagonal = ["TGATCA", "GTTTCA", "CATCAT", "GAGTTA", "ATTGCG", "CTGTTC"]
 
     #********************************************************************
     # Ejemplo para detectar mutacion
