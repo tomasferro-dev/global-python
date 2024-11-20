@@ -2,8 +2,8 @@
 from mutador import Mutador
 
 class Virus(Mutador):
-    def __init__(self, base_nitrogenada, atributo1, atributo2):
-        super().__init__(base_nitrogenada, atributo1, atributo2)
+    def __init__(self, base_nitrogenada, matriz_adn, atributo2):
+        super().__init__(base_nitrogenada, matriz_adn, atributo2)
 
     def crear_mutante(self, base_nitrogenada, posicion_inicial):
         # Validar que la base nitrogenada sea una de las permitidas
@@ -11,32 +11,25 @@ class Virus(Mutador):
             raise ValueError("La base nitrogenada debe ser una de las siguientes: A, T, C, G")
 
         # Crear una matriz de ADN de ejemplo (6x6)
-        matriz_adn = [
-            ["A", "T", "G", "C", "A", "T"],
-            ["G", "A", "T", "C", "G", "A"],
-            ["T", "G", "A", "C", "T", "G"],
-            ["C", "G", "T", "A", "C", "G"],
-            ["A", "T", "G", "C", "A", "T"],
-            ["G", "A", "T", "C", "G", "A"]
-        ]
-
+        
+        
         fila, columna = posicion_inicial
 
         try:
             # Intentar crear la mutación diagonal hacia abajo y a la derecha
-            if self.puede_mutar_diagonal_derecha(matriz_adn, fila, columna):
-                self.mutar_diagonal_derecha(matriz_adn, base_nitrogenada, fila, columna)
-            elif self.puede_mutar_diagonal_izquierda(matriz_adn, fila, columna):
+            if self.puede_mutar_diagonal_derecha(self.matriz_adn, fila, columna):
+                self.mutar_diagonal_derecha(self.matriz_adn, base_nitrogenada, fila, columna)
+            elif self.puede_mutar_diagonal_izquierda(self.matriz_adn, fila, columna):
                 # Intentar crear la mutación diagonal hacia abajo y a la izquierda
-                self.mutar_diagonal_izquierda(matriz_adn, base_nitrogenada, fila, columna)
+                self.mutar_diagonal_izquierda(self.matriz_adn, base_nitrogenada, fila, columna)
             else:
                 raise IndexError("No hay suficientes elementos para completar ninguna mutación diagonal")
 
         except IndexError as e:
             print(f"Error: {e}")
-            return matriz_adn
+            return self.matriz_adn
 
-        return matriz_adn
+        return self.matriz_adn
 
     def puede_mutar_diagonal_derecha(self, matriz_adn, fila, columna):
         return fila + 3 < len(matriz_adn) and columna + 3 < len(matriz_adn[0])

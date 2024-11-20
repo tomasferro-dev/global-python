@@ -7,5 +7,5 @@ def obtener_adn_usuario():
             print("La entrada no es válida. Asegúrese de ingresar exactamente 36 caracteres y que todos sean A, T, C o G.")
 
     # Dividir la cadena de 36 caracteres en 6 subcadenas de 6 caracteres cada una
-    matriz_adn = [adn[i:i+6] for i in range(0, 36, 6)]
+    matriz_adn = [list(adn[i:i+6]) for i in range(0, 36, 6)]
     return matriz_adn
