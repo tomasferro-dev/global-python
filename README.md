@@ -78,16 +78,17 @@ La aplicación mostrará si la secuencia de ADN es mutante o no:
 
 Puedes seleccionar otras opciones del menú para aplicar radiación, aplicar virus o sanar el ADN.
 
-Estructura del Proyecto
-detector.py: Implementación de la clase Detector.
-mutador.py: Implementación de la clase Mutador.
-radiacion.py: Implementación de la clase Radiacion.
-virus.py: Implementación de la clase Virus.
-sanador.py: Implementación de la clase Sanador.
-interactivo.py: Funciones para interactuar con el usuario.
-menu.py: Menú interactivo para la aplicación.
-ejecutable.py: Archivo principal para ejecutar la aplicación.
-Contribución
+## Estructura del Proyecto
+
+>detector.py: Implementación de la clase Detector.
+>mutador.py: Implementación de la clase Mutador.
+>radiacion.py: Implementación de la clase Radiacion.
+>virus.py: Implementación de la clase Virus.
+>sanador.py: Implementación de la clase Sanador.
+>interactivo.py: Funciones para interactuar con el usuario.
+>menu.py: Menú interactivo para la aplicación.
+>ejecutable.py: Archivo principal para ejecutar la aplicación.
+
 
 ## Contribución
 
