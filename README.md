@@ -112,7 +112,7 @@ Abre un Pull Request en el repositorio original.
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
 ## Contacto
-Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de tu-correo@example.com.
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de davidlpz_y_facultamigos@gmail.com.
 
  ¡Gracias por usar la aplicación de análisis de ADN!  
 

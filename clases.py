@@ -6,22 +6,21 @@ class Detector:
     """
     Clase Detector que verifica la presencia de mutantes en una matriz de ADN.
     """
-    def __init__(self, atributo1: str, atributo2: str):
+    def __init__(self, dimensiones: tuple[int, int] = (6, 6)):
         """
         Inicializa el Detector con dos atributos.
 
-        :param atributo1: Primer atributo descriptivo.
-        :param atributo2: Segundo atributo descriptivo.
+   
+        :param dimensiones: Tupla con las dimensiones de la matriz (filas, columnas). Por defecto, (6, 6).
         """
-        self.atributo1 = atributo1
-        self.atributo2 = atributo2
 
-    def detectar_mutantes(self, matriz_adn: List[str]) -> bool:
+        self.dimensiones = dimensiones
+
+    def detectar_mutantes(self, matriz_adn: List[str]) :
         """
         Detecta si hay mutantes en una matriz de ADN.
 
-        :param matriz_adn: Lista de cadenas que representan la matriz de ADN.
-        :return: True si se detecta un mutante, False en caso contrario.
+        :param matriz_adn: Lista de cadenas que representan la matriz de ADN.        
         """
         matriz = self._convertir_matriz(matriz_adn)
 
@@ -193,16 +192,15 @@ class Sanador:
     """
     Clase Sanador que corrige mutantes en una matriz de ADN.
     """
-    def __init__(self, atributo1: str, atributo2: str):
+    def __init__(self):
         """
         Inicializa el Sanador con dos atributos y un Detector.
 
         :param atributo1: Primer atributo descriptivo.
         :param atributo2: Segundo atributo descriptivo.
         """
-        self.atributo1 = atributo1
-        self.atributo2 = atributo2
-        self.detector = Detector(atributo1, atributo2)
+
+        self.detector = Detector()
 
     def sanar_mutantes(self, matriz_adn: List[str]) -> List[str]:
         """
