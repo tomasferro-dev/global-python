@@ -1,5 +1,6 @@
 from typing import List, Tuple
 import random
+from adn_a_matriz import convertir_adn_a_matriz
 
 
 class Detector:
@@ -213,7 +214,9 @@ class Sanador:
             nuevo_adn = self._generar_adn_aleatorio()
             while self.detector.detectar_mutantes(nuevo_adn):
                 nuevo_adn = self._generar_adn_aleatorio()
+                # nuevo_adn = convertir_adn_a_matriz(nuevo_adn)
             return nuevo_adn
+        
         return matriz_adn
 
     def _generar_adn_aleatorio(self) -> List[str]:

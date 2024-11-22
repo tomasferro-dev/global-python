@@ -62,13 +62,13 @@ def main():
         for fila in matriz_adn:
             print(fila)
 
-        try:
-            matriz_adn = convertir_adn_a_matriz(matriz_adn)
-            print(Fore.GREEN +"Matriz de ADN:")
-            for fila in matriz_adn:
-                print(fila)
-        except ValueError as e:
-            print(f"Error: {e}")
+        # try:
+        #     matriz_adn = convertir_adn_a_matriz(matriz_adn)
+        #     print(Fore.GREEN +"Matriz de ADN:")
+        #     for fila in matriz_adn:
+        #         print(fila)
+        # except ValueError as e:
+        #     print(f"Error: {e}")
         
         detector = Detector()
         radiacion = Radiacion("A", matriz_adn, "atributo2")
