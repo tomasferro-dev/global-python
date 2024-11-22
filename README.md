@@ -115,3 +115,8 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más 
 Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de tu-correo@example.com.
 
  ¡Gracias por usar la aplicación de análisis de ADN!  
+
+ ## Miembros del grupo realizador de esta aplicación
+ Tomas Ferro
+ Sabrina Moreira
+ David Lopez
